@@ -1,3 +1,4 @@
+import br.com.dio.desafio.dominio.Conteudo;
 import br.com.dio.desafio.dominio.Curso;
 import br.com.dio.desafio.dominio.Mentoria;
 
@@ -21,6 +22,11 @@ public class Main {
         mentoria.setDescricao("descricao mentoria java");
         mentoria.setData(LocalDate.now());
 
+        //Conteudo conteudo = new Conteudo();  >> nao da para criar pois eh classe ABSTRATA
+        //posso criar Curso a partir da classe Conteudo:
+        Conteudo conteudo = new Curso(); //POLIMORFISMO
+        // tudo que tem em Conteudo tem em Curso...mas nem tudo que tem em Curso tem em Conteudo
+        Conteudo conteudo1 = new Mentoria(); //conteudo eh mae de mentoria
 
         System.out.println(curso1);
         System.out.println(curso2);
